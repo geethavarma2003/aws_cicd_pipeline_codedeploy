@@ -1,0 +1,19 @@
+import React, { useState } from "react";
+
+function App() {
+  const [num, setNum] = useState(0);
+
+  const add = () => setNum(num + 1);
+  const sub = () => setNum(num - 1);
+
+  return (
+    <div>
+      <h2>Counter Application</h2>
+      <button onClick={add}>+</button>
+      <p>Number: {num}</p>
+      <button onClick={sub}>-</button>
+    </div>
+  );
+}
+
+export default App;
