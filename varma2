@@ -1,19 +1,15 @@
 import React, { useState } from "react";
 
-function App() {
-  const [num, setNum] = useState(0);
-
-  const add = () => setNum(num + 1);
-  const sub = () => setNum(num - 1);
+export default function AppCounter() {
+  const [score, setScore] = useState(0);
 
   return (
     <div>
-      <h2>Counter Application</h2>
-      <button onClick={add}>+</button>
-      <p>Number: {num}</p>
-      <button onClick={sub}>-</button>
+      <h1>Score Counter</h1>
+      <button onClick={() => setScore(score + 1)}>Add</button>
+      <span>{score}</span>
+      <button onClick={() => setScore(score - 1)}>Subtract</button>
     </div>
   );
 }
 
-export default App;
